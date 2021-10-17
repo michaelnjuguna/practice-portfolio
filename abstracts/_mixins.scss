@@ -1,0 +1,37 @@
+@mixin inner-width {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+@mixin primaryHeading {
+    font-family: $header-font;
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+    color: $primaryFontColor;
+    font-weight: 800;
+}
+
+@mixin secondaryHeading {
+    font-family: $header-font;
+    font-size: 2rem;
+    letter-spacing: .5rem;
+    color: $secondaryFontColor;
+    font-weight: 600;
+}
+
+@mixin mainRadius {
+    border-radius: 8px;
+}
+
+@mixin mainTransition{
+    animation-timing-function:cubic-bezier(0, 0, 0.7, 0.71);
+}
+
+@mixin CTABackground {
+    background: linear-gradient(to right,$CTAMainColor,$CTASubColor);
+}
+
+@mixin mainShadow{
+    box-shadow: -8px 2px 18px 7px #0d48a179;
+}

@@ -1,0 +1,66 @@
+.hambuger{
+    background-color: transparent;
+    border: none;
+    z-index: 30;
+    .hambuger-stick__one{
+        width: 3rem;
+        height: 3px;
+        background-color: $primaryFontColor;
+        border: none;
+        @include mainRadius;
+    }
+    .hambuger-stick__two{
+        width: 3rem;
+        height: 3px;
+        background-color: $primaryFontColor;
+        margin-top: .5rem;
+        @include mainRadius;
+        border: none;
+    }
+}
+
+//hambuger list
+
+.rotate-one{
+    transform: rotateZ(45deg) translateY(.5rem) ;
+    background-color: $primaryMainColor !important;
+}
+.rotate-two{
+    transform: rotateZ(-45deg) translateY(-.5rem);
+    background-color: $primaryMainColor !important;
+}
+
+.downloadCV{
+    @include CTABackground;
+    color: $primaryFontColor;
+    font-size: 1.6rem;
+    padding:.4rem;
+    margin: 1rem ;
+    border: none; 
+    @include mainRadius;
+    @include mainTransition;
+    transition-property: all;
+    transition-duration: .3s;
+    @include mainShadow;
+    &:hover{
+       border-bottom: solid 3px $primaryFontColor;
+    }
+ }
+
+ .submit{
+    background-color: $CTAMainColor;
+    padding: .5rem;
+    color: $primaryFontColor;
+    font-size: 1.6rem;
+    transition-property: all;
+    transition-duration: .8s;
+    transition-delay: .3s;
+    border: none;
+    @include mainTransition;
+    @include mainRadius;
+    &:hover{
+        color: $CTAMainColor;
+        background-color: $primaryFontColor;
+    }
+
+}

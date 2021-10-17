@@ -1,0 +1,29 @@
+.logo{
+    font-family: $header-font;
+    color: $primaryFontColor;
+    @include primaryHeading;
+    .logo-icon{
+        background-color: $primaryMainColor;
+        color: $primaryFontColor;
+        padding: .3rem;
+        text-align: center;
+        @include mainRadius;
+        text-align: center;
+        margin: 0 .5rem 0 0;
+    }
+    
+}
+.mobile-logo{
+    font-family: $header-font;
+    color: $primaryFontColor;
+    @include primaryHeading;
+    .mobile-logo__icon{
+        background-color: $primaryMainColor;
+        color: $primaryFontColor;
+        padding: .2rem;
+        text-align: center;
+        @include mainRadius;
+        text-align: center;
+        margin: 0 .2rem 0 0;
+    }
+}

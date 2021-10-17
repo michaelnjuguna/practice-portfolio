@@ -1,0 +1,45 @@
+.footer{
+    min-height: 20rem;
+    text-align: center;
+    .inner-footer{
+        @include inner-width;
+        margin: 2rem auto;
+        h1{
+            font-family: $header-font;
+            color: $secondaryFontColor;
+            letter-spacing: .3rem;
+            margin: 1rem 0;
+            .footer-logo__icon{
+                background-color: $primaryMainColor;
+                color: $primaryFontColor;
+                @include mainRadius;
+                padding:.3rem .5rem ;
+            }
+        }
+        p{
+            font-family: $paragraph-font;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+        a{
+            display: block;
+            margin: 1rem 0;
+                button{
+                    background:linear-gradient(to right,$CTAMainColor, $CTASubColor)   ;
+                    padding: .5rem 1rem;
+                    @include mainRadius;
+                    border: none;
+                    font-size: 1.6rem;
+                    font-family: $paragraph-font;
+                    color: $primaryFontColor;
+                    letter-spacing: .3rem;
+                    &:hover{
+                        border: solid 3px $CTAMainColor;
+                        color: $CTAMainColor;
+                        background: $primaryFontColor;
+                    }
+                }
+        }
+    }
+}

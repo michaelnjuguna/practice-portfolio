@@ -1,0 +1,153 @@
+body {
+    position: relative;
+    background: linear-gradient(to right, $secondaryMainColor, $secondarySubColor);
+}
+
+.brands {
+    width: 100vw;
+    height: 10rem;
+
+    .inner-brands {
+        @include inner-width;
+        margin: 3rem auto;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+
+            li {
+                font-family: $paragraph-font;
+                font-size: 1.5rem;
+                font-weight: 900;
+                color: $secondaryFontColor;
+                filter: grayscale(100%);
+            }
+
+            @media (min-width:767px) {
+                li {
+                    font-size: 2rem;
+                    letter-spacing: .2rem;
+                }
+            }
+        }
+    }
+}
+
+.skills {
+    width: 100vw;
+    text-align: center;
+
+    .inner-skills {
+        color: $secondaryFontColor;
+        @include inner-width;
+
+        h1 {
+            @include secondaryHeading;
+        }
+
+        .skills-icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+            margin: 3rem 0;
+
+            i {
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                margin: 2rem auto;
+                background-color: $iconMainColor;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include mainShadow;
+            }
+        }
+
+        @media (max-width:767px) {
+            .skills-icons {
+                flex-direction: column;
+            }
+        }
+
+        h5 {
+            font-family: $paragraph-font;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.about {
+    width: 100vw;
+    text-align: center;
+
+    h1 {
+        @include secondaryHeading;
+        margin-bottom: 1rem;
+    }
+
+    .about-inner {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .about-description {
+            font-size: 1.6rem;
+            font-family: $paragraph-font;
+            margin: 1rem 0;
+            h2{
+                font-size: 1.6rem;
+                text-align: left;
+            }
+
+            .about-experience {
+                font-size: 3rem;
+                color: $iconSubColor;
+            }
+        }
+
+        .goals {
+            h2 {
+                font-family: $paragraph-font;
+                font-size: 1.6rem;
+                font-weight: 800;
+                color: $secondaryFontColor;
+            }
+
+            ul {
+                list-style:circle;
+                text-align: left;
+                font-size: 1.6rem;
+                font-family: $paragraph-font;
+                color: $secondaryFontColor;
+
+                li {
+                    color: $secondaryFontColor;
+                    font-size: 2rem;
+                    margin-left: 3rem;
+                    
+                }
+
+                progress {
+                    width: 80%;
+                    margin: 1rem auto;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width:767px) {
+        .about-inner {
+            flex-direction: column;
+        }
+    }
+}
+

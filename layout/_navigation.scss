@@ -1,0 +1,123 @@
+.nav {
+    position: static;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-list {
+        li {
+            display: inline-block;
+            font-size: 2rem;
+            margin: 0 1rem 0 0;
+
+            a {
+                color: $primaryFontColor;
+                text-decoration: none;
+                letter-spacing: .3rem;
+                cursor: pointer;
+                padding: 0 0 .5rem 0;
+                transition-property: all;
+                @include mainTransition;
+                transition-duration: .5s;
+                display: block;
+
+                &:hover {
+                    border-bottom: solid 3px $primaryFontColor;
+                    @include mainRadius;
+                    animation-name: moveSideWays;
+                    animation-duration: .8s;
+                    animation-iteration-count: infinite;
+                    @include mainTransition;
+                    animation-delay: 0s;
+                }
+            }
+
+        }
+
+        .nav-CTA {
+            @include CTABackground;
+            padding: 1rem;
+            @include mainRadius;
+            @include mainShadow;
+        }
+    }
+
+}
+
+@media (max-width:767px) {
+    .nav {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    // position: sticky;
+    z-index: 20;
+
+    .mobile-list {
+           display: none;
+        position: absolute;
+        width: 80vw;
+        height: 180vh;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background: linear-gradient(to right, rgb(225, 245, 254), rgb(182, 230, 252));
+        color: $primaryFontColor;
+        list-style: none;
+        animation-name: appearFromLeft;
+        animation-duration: .5s;
+        @include mainTransition;
+
+        li {
+            text-align: center;
+            font-size: 2rem;
+            margin: 28vh 0;
+
+            a {
+                text-decoration: none;
+                font-family: $header-font;
+                font-weight: 600;
+                color: $secondaryFontColor;
+
+                &:hover {
+                    border-bottom: solid 3px $secondaryFontColor;
+                @include mainRadius;
+                }
+            }
+        }
+
+        .mobile-nav__CTA {
+            @include CTABackground;
+            padding: 1rem;
+            @include mainRadius;
+            color: $primaryFontColor;
+        
+        }
+    }
+}
+
+
+@media (min-width:767px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+.modal {
+    display: none;
+}
+
+//display class
+
+.display{
+    display: block !important;
+}

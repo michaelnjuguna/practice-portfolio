@@ -1,0 +1,38 @@
+.sign-in {
+    text-align: center;
+    background: linear-gradient(to right, $primaryMainColor, $primarySubColor);
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    min-height: 20rem;
+
+    .inner-sign__in {
+        @include inner-width;
+        padding: 4rem 0;
+
+        h1 {
+            font-family: $header-font;
+            font-size: 2rem;
+            color: $primaryFontColor;
+            padding: 1rem 0;
+        }
+        .mail{
+            font-size: 1.6rem;
+            font-family: $paragraph-font;
+            height: 3rem;
+        }
+       
+    }
+}
+
+
+.alert{
+    color: $primaryFontColor;
+    text-align: center;
+    height: 2rem;
+    background-color: $CTAMainColor;
+    @include mainRadius;
+    font-size: 1.6rem;
+    margin: 1rem auto;
+    display: none;
+    width: 30vw;
+
+}

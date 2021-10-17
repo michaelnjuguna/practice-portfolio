@@ -1,0 +1,10 @@
+body {
+    width: 100vw;
+    height: 100%;
+}
+
+.header{
+    width: 100vw;
+    min-height: 90vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+}
